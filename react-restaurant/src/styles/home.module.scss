@@ -1,0 +1,11 @@
+.homeWrapper {
+  .homeContent {
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
