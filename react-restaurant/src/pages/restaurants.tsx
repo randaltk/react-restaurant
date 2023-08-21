@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/home.module.scss";
 
 import api from "../services/client";
@@ -25,7 +25,7 @@ const Restaurants = () => {
       .then(function (result) {
         return setRestaurants(result);
       })
-      .catch((err) => setError("Ooops there was an error"))
+      .catch(() => setError("Ooops there was an error"))
       .finally(() => {
         setIsLoading(false);
       });
