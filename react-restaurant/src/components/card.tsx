@@ -16,7 +16,7 @@ export default function Card(props: any) {
 
         <p>{props.price}</p>
 
-        <a href={props.url} target="_blank">
+        <a href={props.url} rel="noreferrer" target="_blank">
           View
         </a>
       </div>
