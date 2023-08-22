@@ -37,20 +37,21 @@ const Restaurants = () => {
 
   return (
     <>
-      <div className={styles.homeWrapper}>
+      <div>
         <h2>Restaurants</h2>
-
-        <div className={styles.homeContent}>
-          {restaurants?.businesses?.map((item: any, i: any) => (
-            <Card
-              index={i}
-              name={item.name}
-              imageUrl={item.image_url}
-              url={item.url}
-              price={item.review_count}
-              rating={5}
-            />
-          ))}
+        <div className={styles.homeWrapper}>
+          <div className={styles.homeContent}>
+            {restaurants?.businesses?.map((item: any, i: any) => (
+              <Card
+                index={i}
+                name={item.name}
+                imageUrl={item.image_url}
+                url={item.url}
+                price={item.review_count}
+                rating={5}
+              />
+            ))}
+          </div>
           {isLoading && <Spinner />}
           {err && <p>Error: {err}</p>}
         </div>

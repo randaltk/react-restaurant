@@ -1,11 +1,16 @@
 .homeWrapper {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
   .homeContent {
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
-    width: 60%;
     display: grid;
-    gap: 100px;
-    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 100px;
+    @media only screen and (max-width: 800px) {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
   }
 }
