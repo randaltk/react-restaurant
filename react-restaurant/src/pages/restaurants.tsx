@@ -58,7 +58,7 @@ const Restaurants = () => {
                 imageUrl={item.image_url}
                 url={item.url}
                 price={item.review_count}
-                rating={5}
+                rating={item.rating}
               />
             ))}
           </div>
