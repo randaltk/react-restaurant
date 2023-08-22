@@ -5,17 +5,26 @@ import api from "../services/client";
 
 import { Spinner } from "../components/spinner";
 import Card from "../components/card";
+import {
+  IBffResponse,
+  IRestaurant,
+  IRestaurantsResponse,
+} from "../types/types";
+import { AxiosResponse } from "axios";
 
 const Restaurants = () => {
-  const [restaurants, setRestaurants] = useState<any>([]);
+  const [restaurants, setRestaurants] = useState<IRestaurantsResponse>({
+    businesses: [],
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [err, setError] = useState("");
 
   const fetchRestaurants = () => {
     setIsLoading(true);
+
     api
       .get("")
-      .then(function (res: any) {
+      .then(function (res: AxiosResponse<IBffResponse>) {
         return res;
       })
       .then(function (res) {
@@ -39,11 +48,12 @@ const Restaurants = () => {
     <>
       <div>
         <h2>Restaurants</h2>
+
         <div className={styles.homeWrapper}>
           <div className={styles.homeContent}>
-            {restaurants?.businesses?.map((item: any, i: any) => (
+            {restaurants?.businesses?.map((item: IRestaurant, i: number) => (
               <Card
-                index={i}
+                key={i}
                 name={item.name}
                 imageUrl={item.image_url}
                 url={item.url}
@@ -52,6 +62,7 @@ const Restaurants = () => {
               />
             ))}
           </div>
+
           {isLoading && <Spinner />}
           {err && <p>Error: {err}</p>}
         </div>

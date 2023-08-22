@@ -4,7 +4,7 @@ exports.handler = async (event) => {
   try {
     const yelpApiKey = process.env.YELP_API_KEY;
     const url =
-      "https://api.yelp.com/v3/businesses/search?term=food&location=San+Francisco";
+      "https://api.yelp.com/v3/businesses/search?term=food&location=San+Francisco&limit=50";
 
     const response = await axios.get(url, {
       headers: {
