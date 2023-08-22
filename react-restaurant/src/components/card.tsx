@@ -10,9 +10,9 @@ export default function Card(props: any) {
           <div className={styles.imageWrapper}>
             <LazyLoadImage
               src={props.imageUrl}
-              width={300}
-              height={120}
-              className="img"
+              // width={""}
+              // height={""}
+              // className="img"
               alt="Image Alt"
               effect="blur"
             />
