@@ -7,7 +7,7 @@ I chose this option to solve the CORS problem and have the application available
 
 Frontend URL: https://react-restaurant-net.netlify.app/
 
-BFF URL (GET): https://41otwa6n9a.execute-api.us-east-2.amazonaws.com/default/get-integration
+BFF URL ( GET ): https://41otwa6n9a.execute-api.us-east-2.amazonaws.com/default/get-integration
 
 
 
