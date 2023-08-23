@@ -4,7 +4,7 @@
   max-width: 20rem;
   max-height: 20rem;
   cursor: pointer;
-
+  position: relative;
   @media only screen and (max-width: 800px) {
     width: 100%;
     height: auto;
@@ -53,7 +53,14 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px;
     outline: none;
-
+    a::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    }
     &:hover {
       background: linear-gradient(
         90deg,
